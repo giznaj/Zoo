@@ -9,7 +9,7 @@ library(dplyr) # For splitting data
 library(e1071) # For SVM
 
 # Set working directory as needed.
-setwd('E:/school/University.Guelph/8020002 - DEOL Data Mining and Machine Learning/Project Assignment 5/')
+setwd('E:/workspaces/r projects/Zoo/Zoo')
 
 # do not set factoring on string columns.  Explicitly set later on
 class.data <- read.csv("class.csv", header=T, sep=",", stringsAsFactors=F)
@@ -104,7 +104,6 @@ summary(svm.tuned.model)
 tuned.pred <- predict(svm.tuned.model, test.x)
 
 # compare before and after
-
 cat("----- Confusion Matrix TEST -----")
 confusionMatrix(test.pred, test.y)
 cat("----- Confusion Matrix TUNED -----")
