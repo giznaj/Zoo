@@ -8,12 +8,14 @@ library(caret) # Supporting model
 library(dplyr) # For splitting data
 library(e1071) # For SVM
 
-# Set working directory as needed.
-setwd('E:/workspaces/r projects/Zoo/Zoo')
+# Get the cuurent working directory of the running script
+WD = dirname(rstudioapi::getSourceEditorContext()$path)
+if (!is.null(WD)) setwd(WD)
+print(WD)
 
 # do not set factoring on string columns.  Explicitly set later on
-class.data <- read.csv("class.csv", header=T, sep=",", stringsAsFactors=F)
-raw.data <- read.csv("zoo.csv", header=T, sep=",", stringsAsFactors=F)
+class.data <- read.csv("../data/class.csv", header=T, sep=",", stringsAsFactors=F)
+raw.data <- read.csv("../data/zoo.csv", header=T, sep=",", stringsAsFactors=F)
 
 # class_type is output prediction variable (factor categoricial variable)
 # this merges the class_name column/variable into the dataset
