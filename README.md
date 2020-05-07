@@ -5,11 +5,27 @@ Using SVM classification to predict 'Animal Class'.  Using svm, predict and conf
 
 ## Classification with SVM
 
+### High Level
 1. Import data files (.csv) into R objects
 2. Clasification / predictions
 3. Compare the results
 4. Visualize the results
 
+### Low Level
+* import data
+* merge data
+* re-order columns in dataframe
+* remove uneccesary objects
+* split data 60:20:20
+* partition and create batches
+* display for review
+* remove name and class from training data
+* generate sample/seed
+* model with svm
+* run prediction on test data
+* compare actual vs prediction
+* display again
+* summary again and tune/fix
 
 ### Analysis
 N/A
